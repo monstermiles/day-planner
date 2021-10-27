@@ -4,3 +4,4 @@ var today = moment();
 var todayFormatted = today.format ("MMM Do, YYYY")
 
 $("#currentDay").text(today.format("MMM Do, YYYY"));
+

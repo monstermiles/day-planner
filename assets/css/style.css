@@ -4,7 +4,7 @@ body {
   line-height: 1;
 }
 
-textarea {
+.textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -33,7 +33,19 @@ textarea {
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;
+  border: 1px solid black;
+}
+
+.col-9 {
+  border: 1px solid black;
+}
+
+.col-2 {
+  border: 1px solid black;
+}
+
+.col-1 {
+  border: 1px solid black;
 }
 
 .hour {
@@ -69,3 +81,5 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+
