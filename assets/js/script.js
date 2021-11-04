@@ -14,7 +14,6 @@ console.log(hour)
 
 
 
-
 //set variable for the time block
 var nine = document.querySelector("#hour9")
 var ten = document.querySelector("#hour10")
@@ -25,6 +24,46 @@ var two = document.querySelector("#hour2")
 var three = document.querySelector("#hour3")
 var four = document.querySelector("#hour4")
 
+
+
+//local storage things
+var button9 = document.querySelector("#button9")
+var textarea9 = document.querySelector("#textarea9")
+
+
+// var eventObject = {
+//     time:"",
+//     eventContent:""
+// }
+
+var eventArray = [] 
+
+
+window.onload = renderEvents
+
+
+function renderEvents(){
+    fetchArray = JSON.parse(localStorage.getItem("eventArrayStorage")) || []
+    console.log(fetchArray.eventObject)
+
+}
+
+
+
+////use this.object from lesson 3.25
+
+button9.addEventListener("click", function(event){ 
+    event.preventDefault()
+    console.log(textarea9.value)
+    eventObject = {
+        time: "hour9",
+        eventContent: textarea9.value
+    }
+    eventArray.push(eventObject)
+    localStorage.setItem("eventArrayStorage", JSON.stringify(eventArray))
+ 
+}
+)
 
 
 
@@ -160,27 +199,7 @@ function colorFour() {
 colorFour()
 
 
-//saving events 
-
-var button9 = document.querySelector("#button9")
-var textarea9 = document.querySelector("#textarea9")
-var userEvent9 = document.querySelector("#userEvent9")
-
-button9.addEventListener("click", function(event){ 
-    console.log(textarea9.value)
-    localStorage.setItem("userEvent9Storage", textarea9.value)
-    textarea9.setAttribute("style", "display:none")
-    console.log(userEvent9Storage)
-
-}
-)
-
-/// on button clcik
-//grab text
-//save 
-//hide input
-//add text to span
 
 
 
-//make refresh button to clear all fields 
+
